@@ -26,7 +26,7 @@ const Signup = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/register", formData);
+      const res = await axios.post("https://aichat-backend-8x0w.onrender.com/api/auth/register", formData);
       setSuccessMessage("You're officially part of soulmateAI! 😘 Redirecting...");
       setTimeout(() => {
         navigate("/");
@@ -45,7 +45,7 @@ const Signup = () => {
 
   const handleGoogleLoginSuccess = async (credentialResponse) => {
     try {
-      const res = await axios.post("https://aichat-backend-8x0w.onrender.com/api/auth/google", {
+      const res = await axios.post("https://soulmateai.vercel.app", {
         tokenId: credentialResponse.credential,
       });
       setSuccessMessage("Google login successful! Redirecting...");
@@ -58,7 +58,7 @@ const Signup = () => {
   };
 
   return (
-    <GoogleOAuthProvider clientId="698396860481-5q2nuvgjqqbnohldr25387fmm5qs24pb.apps.googleusercontent.com">
+    <GoogleOAuthProvider clientId="698396860481-i32riuhnej34e11pcbi0ng3boi7clc3q.apps.googleusercontent.com">
       <div className="d-flex justify-content-center align-items-center vh-100" 
         style={{ background: "linear-gradient(to right, #ffb6c1, #ff6f61)" }}>
         <div className="card shadow-lg p-4" style={{ width: "25rem", borderRadius: "15px" }}>

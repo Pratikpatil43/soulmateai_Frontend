@@ -50,7 +50,7 @@ const Signup = () => {
       });
       setSuccessMessage("Google login successful! Redirecting...");
       setTimeout(() => {
-        navigate("/");
+        navigate("/chat");
       }, 1500);
     } catch (err) {
       setError("Google login failed. Please try again.");

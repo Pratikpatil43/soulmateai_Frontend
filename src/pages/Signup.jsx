@@ -45,7 +45,7 @@ const Signup = () => {
 
   const handleGoogleLoginSuccess = async (credentialResponse) => {
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/google", {
+      const res = await axios.post("https://aichat-backend-8x0w.onrender.com/api/auth/google", {
         tokenId: credentialResponse.credential,
       });
       setSuccessMessage("Google login successful! Redirecting...");
